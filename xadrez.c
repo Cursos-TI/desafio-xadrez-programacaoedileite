@@ -29,23 +29,32 @@ int main() {
     // Inclua o uso de continue e break dentro dos loops.
 
     int i=1;
+    int r= 1;
+
+    printf("*** JOGO DE XADREZ ***\n");
+    printf("\n Torre: \n");
 
     while (i <= 5)
     {
-        printf("%d Torre: Direita\n", i);
+        printf("%d Direita\n", i);
         i++;
     }
 
-    do
-    {
-        printf("\n %d Rainha: Esquerda \n", i);
+    printf("\n Bispo: \n");
 
-    } while (i <= 8);
-    
     for ( i = 1; i <= 5; i++)
     {
-        printf("\n %d Bispo: Cima, Direita \n", i);
+        printf("%d Cima, Direita \n", i);
     }
+
+    printf("\n Rainha: \n");
+
+    do
+    {
+        printf("%d Esquerda \n", r);
+        r++;
+
+    } while (r <= 8);
     
     return 0;
 }
