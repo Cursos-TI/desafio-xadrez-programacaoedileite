@@ -29,7 +29,10 @@ int main() {
     // Inclua o uso de continue e break dentro dos loops.
 
     int i=1;
-    int r= 1;
+    int j= 1;
+    int l = 0;
+    int movimentacao = 1;
+
 
     printf("*** JOGO DE XADREZ ***\n");
     printf("\n Torre: \n");
@@ -51,10 +54,21 @@ int main() {
 
     do
     {
-        printf("%d Esquerda \n", r);
-        r++;
+        printf("%d Esquerda \n", j);
+        j++;
 
-    } while (r <= 8);
-    
+    } while (j <= 8);
+
+    printf("\n Cavalo:  ");
+
+    while (movimentacao--)
+    {
+        for (l = 0; l < 2; l++)
+        {
+            printf("\nBaixo"); // Imprime "Baixo" duas vezes
+        }
+        printf("\nEsquerda\n"); // Imprime "Esquerda" uma vez
+    }
+     
     return 0;
 }
