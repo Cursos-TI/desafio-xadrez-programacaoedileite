@@ -4,6 +4,37 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+//Função recursiva para simular o movimeto da Torre
+void moverTorre (int casas) 
+{
+    if(casas > 0)
+    {
+        printf("Direita\n");
+        moverTorre(casas - 1);
+    }
+}
+
+//Função recursiva para simular o movimeto da Rainha
+void moverRainha (int casas){
+    if(casas > 0){
+        printf("Esquerda\n");
+        moverRainha(casas - 1);
+    }
+}
+
+//Função recursiva para simular o movimeto do Bispo
+void moverBispo (int casas){
+    while (casas--){
+        for (int i = 1; i <= 1; i++)
+        {
+            printf("\nDireita");
+        }
+        printf("\nCima\n");
+        
+    }
+    
+}
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
@@ -28,46 +59,31 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-    int i=1;
-    int j= 1;
-    int l = 0;
+
     int movimentacao = 1;
 
 
     printf("*** JOGO DE XADREZ ***\n");
-    printf("\n Torre: \n");
 
-    while (i <= 5)
-    {
-        printf("%d Direita\n", i);
-        i++;
-    }
+    printf("\n Torre: \n"); // Movimentação da Torre em 5 casas para a Direita
+    moverTorre(5);
 
-    printf("\n Bispo: \n");
+    printf("\n Bispo: \n"); // Movimentação do Bispo em 5 casas na diagonal para direita e para Cima
+    moverBispo(5);
 
-    for ( i = 1; i <= 5; i++)
-    {
-        printf("%d Cima, Direita \n", i);
-    }
-
-    printf("\n Rainha: \n");
-
-    do
-    {
-        printf("%d Esquerda \n", j);
-        j++;
-
-    } while (j <= 8);
-
-    printf("\n Cavalo:  ");
-
+    printf("\n Rainha: \n"); // Movimentação da Torre em 5 casas para a Esquerda
+    moverRainha(8);
+ 
+    printf("\n Cavalo:  "); // Movimentação do cavalo
     while (movimentacao--)
     {
-        for (l = 0; l < 2; l++)
+        for (int i = 0; i < 5; i++)
         {
-            printf("\nBaixo"); // Imprime "Baixo" duas vezes
+            if (i == 0) continue; // Pula a iteração quando i é 0
+            if (i == 3) break;    // Sai do loop quando i é 3
+            printf("\nCima"); // Imprime "Cima" duas vezes
         }
-        printf("\nEsquerda\n"); // Imprime "Esquerda" uma vez
+        printf("\nDireita\n"); // Imprime "Direita" uma vez
     }
      
     return 0;
