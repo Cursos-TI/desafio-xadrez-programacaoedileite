@@ -27,9 +27,9 @@ void moverBispo (int casas){
     while (casas--){
         for (int i = 1; i <= 1; i++)
         {
-            printf("\nDireita");
+            printf("Direita ");
         }
-        printf("\nCima\n");
+        printf("Cima\n");
         
     }
     
